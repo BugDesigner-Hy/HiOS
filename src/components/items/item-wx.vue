@@ -1,36 +1,46 @@
 <template>
   <div class="item item-wx">
-    <svg class="icon icon-weixin" aria-hidden="true"  @click="dialogVisible = true">
+    <svg class="icon icon-weixin" aria-hidden="true" @click="interfaceVisible = !interfaceVisible">
       <use xlink:href="#icon-liaotian" />
     </svg>
+
     <div class="item-name">微信</div>
-    <el-dialog
-      title="提示"
-      :visible.sync="dialogVisible"
-      width="30%"
-      :fullscreen="false"
-      :modal="false"
-      :close-on-click-modal="false"
-      :close-on-press-escape="false"
-    >
-      <span>这是微信应用</span>
-    </el-dialog>
+    <interface :visible="interfaceVisible">
+      <template v-slot:title>
+        <span class="interfacr-title">{{name}}</span>
+      </template>
+      <template v-slot:main>
+        <div class="interface-main">Here might be a page main</div>
+      </template>
+    </interface>
   </div>
 </template>
 
 <script>
+import Interface from './components/interface'
 export default {
+  name: 'item-wx',
+  components: {
+    Interface
+  },
   data () {
     return {
-      dialogVisible: false
+      name: '微信',
+      interfaceVisible: false
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-// .icon-weixin {
-//   font-size: 80px;
-// //   color: #1aad19;
-// }
+.interfacr-title{
+  position: absolute;
+  left: 10px;
+}
+.interface-main{
+  width: 100%;
+  height: 100%!important;
+  text-align: center;
+}
+
 </style>

@@ -3,20 +3,20 @@
     <div class="windows" @click="changeTaskCascaderVisible">
       <i class="iconfont icon-windows"></i>
     </div>
-    <div class="sound">
-      <i class="iconfont icon-yinliang"></i>
-    </div>
     <div class="time">{{currentTime.hh}}:{{currentTime.mm}}</div>
     <task-cascader :visible="taskCascaderVisible"></task-cascader>
+    <task-sound></task-sound>
   </div>
 </template>
 
 <script>
 import TaskCascader from './taskbar/task-cascader'
+import TaskSound from './taskbar/task-sound'
 export default {
   name: 'desktop',
   components: {
-    TaskCascader
+    TaskCascader,
+    TaskSound
   },
   data () {
     return {
@@ -80,12 +80,5 @@ export default {
   line-height: 40px;
   text-align: center;
 }
-.sound {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  right: 70px;
-  line-height: 40px;
-  text-align: center;
-}
+
 </style>
