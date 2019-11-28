@@ -49,6 +49,9 @@ export default {
     height: 40px;
     line-height: 40px;
     text-align: center;
+    .icon-yinliang:hover{
+      font-size: 1.2em;
+    }
   }
 }
 </style>

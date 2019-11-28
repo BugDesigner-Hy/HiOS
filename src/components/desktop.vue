@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import ItemWx from './items/item-wx'
-import ItemQqmusic from './items/item-qqmusic'
+import ItemWx from './items/wx/item-wx'
+import ItemQqmusic from './items/qqmusic/item-qqmusic'
 import ItemBeiwanglu from './items/item-beiwanglu'
 import ItemClock from './items/item-clock'
 import ItemJisuanji from './items/item-jisuanji'
@@ -27,7 +27,7 @@ import ItemNotes from './items/item-notes'
 import ItemRili from './items/item-rili'
 import ItemShipin from './items/item-shipin'
 import ItemTianqi from './items/item-tianqi'
-import ItemTixing from './items/item-tixing'
+import ItemTixing from './items/tixing/item-tixing'
 import ItemTongxunlu from './items/item-tongxunlu'
 import ItemWenjianjia from './items/item-wenjianjia'
 import ItemXiangji from './items/item-xiangji'

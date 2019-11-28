@@ -6,19 +6,30 @@
     <div class="time">{{currentTime.hh}}:{{currentTime.mm}}</div>
     <task-cascader :visible="taskCascaderVisible"></task-cascader>
     <task-sound></task-sound>
+    <div class="task-content">
+      <task-wx></task-wx>
+      <task-music></task-music>
+      <task-tixing></task-tixing>
+    </div>
   </div>
 </template>
 
 <script>
 import TaskCascader from './taskbar/task-cascader'
 import TaskSound from './taskbar/task-sound'
+import TaskWx from './taskbar/task-wx'
+import TaskMusic from './taskbar/task-music'
+import TaskTixing from './taskbar/task-tixing'
 export default {
   name: 'desktop',
   components: {
     TaskCascader,
-    TaskSound
+    TaskSound,
+    TaskWx,
+    TaskMusic,
+    TaskTixing
   },
-  data () {
+  data() {
     return {
       currentTime: {
         hh: '',
@@ -27,18 +38,18 @@ export default {
       taskCascaderVisible: false
     }
   },
-  mounted () {
+  mounted() {
     setInterval(() => {
       this.updateTime()
     }, 1000)
   },
   methods: {
-    updateTime () {
+    updateTime() {
       let date = new Date()
       this.currentTime.hh = String(date.getHours() < 10 ? '0' + date.getHours() : date.getHours())
       this.currentTime.mm = String(date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
     },
-    changeTaskCascaderVisible () {
+    changeTaskCascaderVisible() {
       this.taskCascaderVisible = !this.taskCascaderVisible
     }
   }
@@ -80,5 +91,15 @@ export default {
   line-height: 40px;
   text-align: center;
 }
-
+.task-content {
+  display: flex;
+  justify-content: row;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  min-width: 1500px;
+  left: 70px;
+  // background-color: #eee;
+}
 </style>

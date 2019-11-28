@@ -21,6 +21,10 @@ body
     overflow: hidden;
     font-size: 80px;
  }
+ .task-icon{
+    width: 40px;
+    height: 40px;
+ }
  .item-name{
      text-align: center;
      color: #fff;
@@ -28,3 +32,17 @@ body
      font-size: 15px;
      padding-top: 1px;
  }
+ .task-item{
+    position: relative;
+    font-size: 1.5em;
+    /* width: 33px;
+    height: 31px; */
+    border-radius: 2%;
+    margin:0 6px;
+    border: 1px solid #a7b7d4 ;
+}
+.task-item:hover{
+    font-size: 1.7em;
+    /* border: 1px solid #a7b7d4 ; */
+    box-shadow: 0 0 10px #a7b7d4;
+}

@@ -1,8 +1,8 @@
 <template>
-  <div class="interface" v-show="interfaceVisible" v-drag>
+  <div class="interface" v-if="visible" v-drag>
     <div class="interface-title">
-      <slot name="title" class="title">应用标题</slot>
-      <svg class="icon icon-weishenhe" aria-hidden="true">
+      <div class="item-name">QQ音乐</div>
+      <svg class="icon icon-weishenhe" aria-hidden="true" @click="minimize">
         <use xlink:href="#icon-weishenhe" />
       </svg>
       <svg class="icon icon-zengjia" aria-hidden="true">
@@ -12,34 +12,27 @@
         <use xlink:href="#icon-shanchuhang" />
       </svg>
     </div>
-    <div class="interface-main">
-      <slot name="main">应用窗口</slot>
-    </div>
+    <div class="interface-main">Here might be a page main</div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['visible'],
-  data () {
-    return {
-      //   tmpVisible: this.visible
-    }
+  data() {
+    return {}
   },
   computed: {
-    interfaceVisible: {
-      get: function () {
-        return this.visible | false
-      },
-      set: function (value) {
-        // this.tmpVisible = value
-        // this.visible = value
-      }
+    visible() {
+      return this.$store.state.interface_qqmusic_visible
     }
   },
   methods: {
-    close () {
-      this.interfaceVisible = false
+    close() {
+      this.$store.commit('changeInterfaceQQmusicVisible')
+      this.$store.commit('changeTaskQQmusicVisible')
+    },
+    minimize() {
+      this.$store.commit('changeInterfaceQQmusicVisible')
     }
   }
 }
@@ -74,10 +67,16 @@ export default {
     .icon:hover {
       font-size: 1.6em;
     }
+    .item-name {
+      position: absolute;
+      left: 10px;
+    }
   }
   .interface-main {
     position: relative;
     height: 90%;
+    width: 100%;
+    text-align: center;
   }
 }
 </style>
