@@ -1,24 +1,19 @@
 # HiOS桌面系统
 
-## Project setup
-```
-npm install
-```
+#### 目前完成的功能
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- 桌面布局
+- 任务栏
+- 喇叭滑块 只是实现效果绘制 暂时没有实现控制音量的效果
+- 时间显示 实时显示当前时间
+- 开始菜单 
+- 应用窗口绘制
+- 点击应用 弹出应用主题 同时菜单栏出现应用小图标
+- 应用实现最小化和关闭功能
 
-### Compiles and minifies for production
-```
-npm run build
-```
+#### 目前的效果：
 
-### Lints and fixes files
-```
-npm run lint
-```
+![1](./readme/1.jpg)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![2](./readme/2.jpg)
+
