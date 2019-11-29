@@ -17,9 +17,9 @@
 <script>
 import TaskCascader from './taskbar/task-cascader'
 import TaskSound from './taskbar/task-sound'
-import TaskWx from './taskbar/task-wx'
-import TaskMusic from './taskbar/task-music'
-import TaskTixing from './taskbar/task-tixing'
+import TaskWx from './items/wx/task-wx'
+import TaskMusic from './items/qqmusic/task-music'
+import TaskTixing from './items/tixing/task-tixing'
 export default {
   name: 'desktop',
   components: {
