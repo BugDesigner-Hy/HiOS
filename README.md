@@ -1,4 +1,17 @@
-# HiOS桌面系统
+# HiOS仿桌面系统
+
+#### 如何使用
+
+```shell
+//1.克隆项目到本地
+git clone https://github.com/BugDesigner-Hy/HiOS.git
+//2.安装依赖
+npm i
+//3.运行项目 或使用 vue ui 利用vue CLI的图形界面启动项目 默认8080端口
+npm run serve
+```
+
+##### 说明 本项目中的音乐播放器使用的接口是[[网易云音乐Node版]( https://binaryify.github.io/NeteaseCloudMusicApi/#/ )]，要想正常使用音乐播放功能 需要将该项目部署到本地并启动才行 [具体步骤](https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=%e5%ae%89%e8%a3%85)在这里
 
 #### 目前完成的功能
 
@@ -16,7 +29,11 @@
 
 <img src="./readme/3.png" style="zoom:75%;" />
 
+#### 未解决的问题及八阿哥[bug]:
 
+1.激活当前应用没有出现在桌面的最上面
+
+2.只实现了拖拽功能 没有实现自由缩放界面
 
 
 
