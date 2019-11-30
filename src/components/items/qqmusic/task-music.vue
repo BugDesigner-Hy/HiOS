@@ -1,7 +1,7 @@
 <template>
   <!-- <div class="task-item task-wx"> -->
-  <svg class="icon icon-qqmusic task-item" aria-hidden="true" v-if="visible" @click="showInterface">
-    <use xlink:href="#icon-QQyinle" />
+  <svg class="icon icon-bofangji task-item" aria-hidden="true" v-if="visible" @click="showInterface">
+    <use xlink:href="#icon-bofangji" />
   </svg>
   <!-- </div> -->
 </template>

@@ -15,7 +15,7 @@ export function login() {
 export function topsong() {
     return new Promise((resolve, reject) => {
         const params = {
-            type: '7',
+            type: '96',
         }
         http.get('http://localhost:3000/top/song', { params }).then(res => {
             resolve(res)
