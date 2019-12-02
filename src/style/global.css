@@ -46,3 +46,8 @@ body
     /* border: 1px solid #a7b7d4 ; */
     box-shadow: 0 0 10px #a7b7d4;
 }
+.middle{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

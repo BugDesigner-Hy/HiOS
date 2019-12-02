@@ -3,7 +3,7 @@ import Vue from 'vue'
 Vue.directive('drag', {
   bind: function (el) {
     el.onmousedown = (e) => {
-      el.style.zIndex = 999
+      // el.style.zIndex = 999
       var disx = e.clientX - el.offsetLeft
       var disy = e.clientY - el.offsetTop
       document.onmousemove = function (e) {
@@ -31,7 +31,7 @@ Vue.directive('drag', {
       document.onmouseup = function () {
         document.onmousemove = document.onmouseup = null
       }
-      return false
+      return true
     }
   }
 })

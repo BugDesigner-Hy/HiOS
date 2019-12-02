@@ -219,14 +219,16 @@ export default {
     border-top-right-radius: 2%;
     position: relative;
     background-size: cover;
+    overflow: hidden;
     .bgpic {
       position: absolute;
       width: 100%;
       height: 100%;
-      transition: 1;
+      transition: 0.3s;
     }
     .bgpic:hover {
       opacity: 0.5;
+      transform: scale(1.2);
     }
     .bgpic:hover ~ .song-name {
       opacity: 1;
@@ -260,6 +262,7 @@ export default {
         font-size: 1em;
         margin: 3px 2px;
         opacity: 0.3;
+        transition: 0.5s;
       }
       .icon:hover {
         opacity: 1;
@@ -300,6 +303,7 @@ export default {
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: -1;
     .icon {
       font-size: 1.5em;
       margin: 0 20px;
