@@ -6,7 +6,7 @@ export function login() {
             phone: '18811435711',
             password: 'haiyang123'
         }
-        http.get('http://localhost:3000/login/cellphone?phone=18811435711&password=haiyang123').then(res => {
+        http.get('/login/cellphone?phone=18811435711&password=haiyang123').then(res => {
             resolve(res)
         }).catch(err => reject(err))
     })
@@ -17,7 +17,7 @@ export function topsong() {
         const params = {
             type: '96',
         }
-        http.get('http://localhost:3000/top/song', { params }).then(res => {
+        http.get('/top/song', { params }).then(res => {
             resolve(res)
         }).catch(err => reject(err))
     })

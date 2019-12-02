@@ -5,7 +5,7 @@ import Qs from 'qs'
 
 // 创建axios实例
 const service = axios.create({
-  baseURL: 'http://localhost:3000', // api 的 base_url
+  baseURL: 'http://36.103.242.204:3000', // api 的 base_url
   timeout: 15000, // 请求超时时间
   withCredentials: true,
   transformRequest: [(data, header) => {

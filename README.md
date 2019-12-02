@@ -2,6 +2,8 @@
 
 #### 如何使用
 
+可以直接访问 http://www.haiyang.wiki:8888/ 或者按照如下步骤在本地运行
+
 ```shell
 //1.克隆项目到本地
 git clone https://github.com/BugDesigner-Hy/HiOS.git

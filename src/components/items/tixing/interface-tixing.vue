@@ -333,11 +333,11 @@ export default {
   width: 1px;
   height: 1px;
 }
-.remindList::-webkit-scrollbar-track {
-  // box-shadow: inset 0 0 6px rgb(143, 136, 136);
-  // border-radius: 20px;
-  // background-color: rgba(255, 255, 255, 1);
-}
+// .remindList::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 6px rgb(143, 136, 136);
+//   border-radius: 20px;
+//   background-color: rgba(255, 255, 255, 1);
+// }
 .remindList::-webkit-scrollbar-thumb {
   // border-radius: 20px;
   // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
