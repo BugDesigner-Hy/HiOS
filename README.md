@@ -28,6 +28,7 @@ npm run serve
 - 实现音乐播放器APP 接口调用【[网易云音乐欧美新歌速递](https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=%e6%96%b0%e6%ad%8c%e9%80%9f%e9%80%92)】可上一首/下一首切歌 可暂停播放 可静音 可循环单曲 鼠标移到应用界面显示歌曲名和作者
 - 实现提醒事项App 可以添加事项 可以修改事项为已完成 可以删除事项 可以搜索事项
 - 实现相册App 点击图片浏览大图 可任意缩放比例
+- 实现日历功能 这里使用了elementUI中的日历组件
 
 #### 桌面效果
 
@@ -36,6 +37,8 @@ npm run serve
 <img src="./readme/tixing.png" style="zoom:75%;" />
 
 <img src="./readme/xiangce.png" style="zoom:75%;" />
+
+<img src="./readme/rili.png" style="zoom:75%;" />
 
 #### 未解决的问题及八阿哥[bug]:
 

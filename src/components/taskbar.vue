@@ -11,6 +11,7 @@
       <task-music></task-music>
       <task-tixing></task-tixing>
       <task-xiangce></task-xiangce>
+      <task-rili></task-rili>
     </div>
   </div>
 </template>
@@ -22,6 +23,7 @@ import TaskWx from './items/wx/task-wx'
 import TaskMusic from './items/qqmusic/task-music'
 import TaskTixing from './items/tixing/task-tixing'
 import TaskXiangce from './items/xiangce/task-xiangce'
+import TaskRili from './items/rili/task-rili';
 export default {
   name: 'desktop',
   components: {
@@ -30,7 +32,8 @@ export default {
     TaskWx,
     TaskMusic,
     TaskTixing,
-    TaskXiangce
+    TaskXiangce,
+    TaskRili
   },
   data() {
     return {

@@ -12,7 +12,9 @@ export default new Vuex.Store({
     interface_tixing_visible: false,
     task_tixing_visible: false,
     interface_xiangce_visible: false,
-    task_xiangce_visible: false
+    task_xiangce_visible: false,
+    interface_rili_visible: false,
+    task_rili_visible: false
 
   },
   mutations: {
@@ -39,6 +41,12 @@ export default new Vuex.Store({
     },
     changeTaskXiangceVisible(state) {
       state.task_xiangce_visible = !state.task_xiangce_visible
+    },
+    changeInterfaceRiliVisible(state) {
+      state.interface_rili_visible = !state.interface_rili_visible
+    },
+    changeTaskRiliVisible(state) {
+      state.task_rili_visible = !state.task_rili_visible
     }
   },
   actions: {
