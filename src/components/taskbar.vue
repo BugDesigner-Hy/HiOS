@@ -10,6 +10,7 @@
       <task-wx></task-wx>
       <task-music></task-music>
       <task-tixing></task-tixing>
+      <task-xiangce></task-xiangce>
     </div>
   </div>
 </template>
@@ -20,6 +21,7 @@ import TaskSound from './taskbar/task-sound'
 import TaskWx from './items/wx/task-wx'
 import TaskMusic from './items/qqmusic/task-music'
 import TaskTixing from './items/tixing/task-tixing'
+import TaskXiangce from './items/xiangce/task-xiangce'
 export default {
   name: 'desktop',
   components: {
@@ -27,7 +29,8 @@ export default {
     TaskSound,
     TaskWx,
     TaskMusic,
-    TaskTixing
+    TaskTixing,
+    TaskXiangce
   },
   data() {
     return {
@@ -98,7 +101,6 @@ export default {
   position: absolute;
   bottom: 0;
   height: 40px;
-  min-width: 1500px;
   left: 70px;
   // background-color: #eee;
 }

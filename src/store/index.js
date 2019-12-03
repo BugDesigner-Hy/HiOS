@@ -10,7 +10,9 @@ export default new Vuex.Store({
     interface_qqmusic_visible: false,
     task_qqmusic_visible: false,
     interface_tixing_visible: false,
-    task_tixing_visible: false
+    task_tixing_visible: false,
+    interface_xiangce_visible: false,
+    task_xiangce_visible: false
 
   },
   mutations: {
@@ -31,6 +33,12 @@ export default new Vuex.Store({
     },
     changeTaskTixingVisible(state) {
       state.task_tixing_visible = !state.task_tixing_visible
+    },
+    changeInterfaceXiangceVisible(state) {
+      state.interface_xiangce_visible = !state.interface_xiangce_visible
+    },
+    changeTaskXiangceVisible(state) {
+      state.task_xiangce_visible = !state.task_xiangce_visible
     }
   },
   actions: {

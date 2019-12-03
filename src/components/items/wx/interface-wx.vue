@@ -40,8 +40,8 @@ export default {
 
 <style lang="scss" scoped>
 .interface {
-  width: 600px;
-  height: 400px;
+  width: 70vh;
+  height: 45vh;
   position: absolute;
   left: 50%;
   top: 50%;

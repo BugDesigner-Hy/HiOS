@@ -12,7 +12,7 @@
     <item-tixing></item-tixing>
     <item-tongxunlu></item-tongxunlu>
     <item-wenjianjia></item-wenjianjia>
-    <item-xiangji></item-xiangji>
+    <item-xiangce></item-xiangce>
     <item-shangdian></item-shangdian>
   </div>
 </template>
@@ -30,7 +30,7 @@ import ItemTianqi from './items/item-tianqi'
 import ItemTixing from './items/tixing/item-tixing'
 import ItemTongxunlu from './items/item-tongxunlu'
 import ItemWenjianjia from './items/item-wenjianjia'
-import ItemXiangji from './items/item-xiangji'
+import ItemXiangce from './items/xiangce/item-xiangce'
 import ItemShangdian from './items/item.shangdian'
 export default {
   name: 'desktop',
@@ -47,7 +47,7 @@ export default {
     ItemTixing,
     ItemTongxunlu,
     ItemWenjianjia,
-    ItemXiangji,
+    ItemXiangce,
     ItemShangdian
   }
 }

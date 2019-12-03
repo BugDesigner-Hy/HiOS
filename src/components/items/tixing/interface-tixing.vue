@@ -160,8 +160,8 @@ export default {
 
 <style lang="scss" scoped>
 .tixing {
-  width: 380px;
-  height: 500px;
+  width: 39vh;
+  height: 54vh;
   background-color: rgba(255, 255, 255, 1);
   position: absolute;
   top: 50%;
@@ -170,6 +170,7 @@ export default {
   box-sizing: border-box;
   padding: 0 20px;
   border-radius: 5px;
+  resize: both;
 }
 .title {
   position: absolute;
@@ -213,7 +214,7 @@ export default {
     transition: 0.5s linear;
   }
   input:focus + span::after {
-    width: 328px;
+    width: 34vh;
   }
   .el-icon-search {
     position: absolute;
