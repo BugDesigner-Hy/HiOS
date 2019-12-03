@@ -160,7 +160,7 @@ export default {
 
 <style lang="scss" scoped>
 .tixing {
-  width: 39vh;
+  width: 380px;
   height: 54vh;
   background-color: rgba(255, 255, 255, 1);
   position: absolute;

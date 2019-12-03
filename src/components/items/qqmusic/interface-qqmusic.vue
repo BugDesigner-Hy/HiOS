@@ -205,8 +205,8 @@ export default {
 
 <style lang="scss" scoped>
 .music {
-  width: 38vh;
-  height: 33vh;
+  width: 380px;
+  height: 35vh;
   position: absolute;
   left: 50%;
   top: 50%;

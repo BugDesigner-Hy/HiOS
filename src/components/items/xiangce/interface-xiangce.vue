@@ -1,5 +1,5 @@
 <template>
-  <div class="xiangce" v-if="visible" >
+  <div class="xiangce" v-if="visible">
     <div class="control">
       <svg class="icon icon-weishenhe" aria-hidden="true" @click="minimize">
         <use xlink:href="#icon-weishenhe" />
@@ -282,8 +282,8 @@ export default {
 
 <style lang="scss" scoped>
 .xiangce {
-  width: 95vh;
-  height: 75vh;
+  width: 75vw;
+  height: 70vh;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -318,7 +318,7 @@ export default {
     font-weight: 700;
     // display: block;
     .line {
-      width: 11vh;
+      width: 7vw;
       height: 2px;
       margin: 0 auto;
       background-color: #333;
@@ -388,7 +388,7 @@ export default {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 50vh;
+      width: 40vw;
       height: 50vh;
       img {
         width: 100%;
@@ -430,17 +430,17 @@ export default {
     opacity: 0.4;
     position: absolute;
     bottom: 10px;
-    width: 50vh;
+    width: 30vw;
     left: 50%;
     transition: 0.3s;
     transform: translateX(-50%);
     // z-index: 888;
     .el-slider__runway {
-      height: 30px;
+      height: 3vh;
       margin: 0;
       border-radius: 10px;
       .el-slider__bar {
-        height: 30px;
+        height: 3vh;
         border-radius: 10px;
       }
       .el-slider__button-wrapper {
