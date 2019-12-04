@@ -15,6 +15,8 @@ export default new Vuex.Store({
     task_xiangce_visible: false,
     interface_rili_visible: false,
     task_rili_visible: false,
+    interface_tianqi_visible: false,
+    task_tianqi_visible: false,
     bgc: require('../assets/bg.jpg'),
     remindList: [
       {
@@ -78,6 +80,12 @@ export default new Vuex.Store({
     },
     changeTaskRiliVisible(state) {
       state.task_rili_visible = !state.task_rili_visible
+    },
+    changeInterfaceTianqiVisible(state) {
+      state.interface_tianqi_visible = !state.interface_tianqi_visible
+    },
+    changeTaskTianqiVisible(state) {
+      state.task_tianqi_visible = !state.task_tianqi_visible
     }
   },
   actions: {
