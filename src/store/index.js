@@ -14,10 +14,41 @@ export default new Vuex.Store({
     interface_xiangce_visible: false,
     task_xiangce_visible: false,
     interface_rili_visible: false,
-    task_rili_visible: false
+    task_rili_visible: false,
+    bgc: require('../assets/bg.jpg'),
+    remindList: [
+      {
+        content: '下午两点开会',
+        date: '2019-12-01',
+        done: true
+      },
+      {
+        content: '明天吃烤鸭',
+        date: '2019-12-02',
+        done: true
+      },
+      {
+        content: '后天吃大盘鸡',
+        date: '2019-12-02',
+        done: false
+      },
+      {
+        content: '周末去爬山',
+        date: '2019-12-04',
+        done: false
+      }
+    ]
 
   },
   mutations: {
+    updateBgc(state, newbgc) {
+      // console.log('state.bgc :', state.bgc);
+      state.bgc = newbgc
+      console.log('state.bgc :', state.bgc);
+    },
+    updateRemindList(state, newList) {
+      state.remindList = newList
+    },
     changeInterfaceWxVisible(state) {
       state.interface_wx_visible = !state.interface_wx_visible
     },
@@ -50,6 +81,12 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    updateRemindList(context, newlist) {
+      context.commit('updateRemindList', newlist)
+    },
+    updateBgc(context, newBgc) {
+      context.commit('updateBgc', newBgc)
+    }
   },
   modules: {
   }

@@ -21,7 +21,7 @@
         <input type="text" v-model="item.content" :class="{linethrough:item.done}" />
         <div class="date">{{item.date}}</div>
         <span></span>
-        <div class="deleteItem" @click="()=>deleteItem(index)">删除</div>
+        <i class="el-icon-delete deleteItem" @click="()=>deleteItem(index)"></i>
       </li>
     </ul>
 
@@ -50,35 +50,18 @@
 </template>
 
 <script>
+import { formatDate } from '../../../plugins/date'
 export default {
   data() {
     return {
       isUp: false,
       newItemContent: '',
       search: '',
-      remindList: [
-        {
-          content: '下午两点开会',
-          date: '2019-12-01',
-          done: true
-        },
-        {
-          content: '明天吃烤鸭',
-          date: '2019-12-02',
-          done: true
-        },
-        {
-          content: '后天吃大盘鸡',
-          date: '2019-12-02',
-          done: false
-        },
-        {
-          content: '周末去爬山',
-          date: '2019-12-04',
-          done: false
-        }
-      ]
+      remindList: []
     }
+  },
+  mounted: function() {
+    this.remindList = this.getRemindList()
   },
   computed: {
     visible() {
@@ -116,43 +99,25 @@ export default {
       let content = this.newItemContent
       let newItem = {
         content: content,
-        date: '2019-12-31',
+        date: formatDate(new Date()),
         done: false
       }
       this.remindList.push(newItem)
+      this.$store.dispatch('updateRemindList', this.remindList)
       this.newItemContent = ''
       this.isUp = false
     },
     changeItemDone(item, index) {
       this.remindList[index].done = !item.done
+      this.$store.dispatch('updateRemindList', this.remindList)
     },
     deleteItem(index) {
       this.remindList.splice(index, 1)
+      // this.$store.commit('updateRemindList', this.remindList)
+      this.$store.dispatch('updateRemindList', this.remindList)
     },
     getRemindList() {
-      let list = [
-        {
-          content: '下午两点开会',
-          date: '2019-12-01',
-          done: true
-        },
-        {
-          content: '明天吃烤鸭',
-          date: '2019-12-02',
-          done: true
-        },
-        {
-          content: '后天吃大盘鸡',
-          date: '2019-12-02',
-          done: false
-        },
-        {
-          content: '周末去爬山',
-          date: '2019-12-04',
-          done: false
-        }
-      ]
-      return list
+      return this.$store.state.remindList
     }
   }
 }
@@ -276,7 +241,7 @@ export default {
       padding-left: 2px;
       padding-bottom: 7px;
       font-size: 1.4em;
-      transition: 0.3s;
+      transition: 0.5s;
       color: #263238;
     }
     span::after {
@@ -293,26 +258,24 @@ export default {
       padding-bottom: 0px;
       font-size: 1.5em;
     }
-    input:focus ~ span::after {
-      width: 260px;
-      top: 62px;
-    }
+    // input:focus ~ span::after {
+    //   width: 260px;
+    //   top: 62px;
+    // }
 
     .deleteItem {
-      width: 0px;
-      height: 72px;
-      background-color: #f44336;
       position: absolute;
       right: 35px;
       bottom: 3px;
-      transition: 0.3s;
+      transition: 0.5s;
       text-align: center;
-      color: #fff;
-      line-height: 67px;
+      color: rgb(231, 46, 46);
+      line-height: 6vh;
       cursor: pointer;
+      opacity: 0;
     }
     input:focus ~ .deleteItem {
-      width: 60px;
+      opacity: 1;
     }
     .date {
       position: absolute;
@@ -323,7 +286,7 @@ export default {
       bottom: 6px;
       color: grey;
       font-size: 0.5em;
-      transition: 0.3s;
+      transition: 0.5s;
     }
     input:focus ~ .date {
       opacity: 0;

@@ -19,9 +19,12 @@
         :style="{width:itemWidth+'px',height:itemWidth+'px'}"
         v-for="(item,index) in items"
         :key="index"
-        @click="()=>preview(item,index)"
       >
-        <img :src="item.picSrc" />
+        <img :src="item.picSrc" @click="()=>preview(item,index)" />
+        <div class="option">
+          <i class="el-icon-delete" @click="()=>deleteItem(index)"></i>
+          <i class="el-icon-monitor" @click="()=>setbackground(item)"></i>
+        </div>
       </div>
     </div>
     <div class="preview" :style="{opacity:previewOpacity,zIndex:previewZindex}">
@@ -60,10 +63,64 @@ export default {
           picSrc: require('../../../assets/3.jpg')
         },
         {
+          picSrc: require('../../../assets/bg.jpg')
+        },
+        {
+          picSrc: require('../../../assets/1.jpg')
+        },
+        {
+          picSrc: require('../../../assets/2.jpg')
+        },
+        {
+          picSrc: require('../../../assets/bg.jpg')
+        },
+        {
+          picSrc: require('../../../assets/4.jpg')
+        },
+        {
+          picSrc: require('../../../assets/demo.jpg')
+        },
+        {
+          picSrc: require('../../../assets/1.jpg')
+        },
+        {
+          picSrc: require('../../../assets/bg.jpg')
+        },
+        {
+          picSrc: require('../../../assets/3.jpg')
+        },
+        {
           picSrc: require('../../../assets/4.jpg')
         },
         {
           picSrc: require('../../../assets/1.jpg')
+        },
+        {
+          picSrc: require('../../../assets/2.jpg')
+        },
+        {
+          picSrc: require('../../../assets/3.jpg')
+        },
+        {
+          picSrc: require('../../../assets/4.jpg')
+        },
+        {
+          picSrc: require('../../../assets/bg.jpg')
+        },
+        {
+          picSrc: require('../../../assets/1.jpg')
+        },
+        {
+          picSrc: require('../../../assets/2.jpg')
+        },
+        {
+          picSrc: require('../../../assets/bg.jpg')
+        },
+        {
+          picSrc: require('../../../assets/4.jpg')
+        },
+        {
+          picSrc: require('../../../assets/bg.jpg')
         },
         {
           picSrc: require('../../../assets/2.jpg')
@@ -78,7 +135,7 @@ export default {
           picSrc: require('../../../assets/demo.jpg')
         },
         {
-          picSrc: require('../../../assets/1.jpg')
+          picSrc: require('../../../assets/bg.jpg')
         },
         {
           picSrc: require('../../../assets/2.jpg')
@@ -87,22 +144,7 @@ export default {
           picSrc: require('../../../assets/3.jpg')
         },
         {
-          picSrc: require('../../../assets/4.jpg')
-        },
-        {
-          picSrc: require('../../../assets/1.jpg')
-        },
-        {
-          picSrc: require('../../../assets/2.jpg')
-        },
-        {
-          picSrc: require('../../../assets/3.jpg')
-        },
-        {
-          picSrc: require('../../../assets/4.jpg')
-        },
-        {
-          picSrc: require('../../../assets/demo.jpg')
+          picSrc: require('../../../assets/bg.jpg')
         },
         {
           picSrc: require('../../../assets/1.jpg')
@@ -117,19 +159,7 @@ export default {
           picSrc: require('../../../assets/4.jpg')
         },
         {
-          picSrc: require('../../../assets/1.jpg')
-        },
-        {
-          picSrc: require('../../../assets/2.jpg')
-        },
-        {
-          picSrc: require('../../../assets/3.jpg')
-        },
-        {
-          picSrc: require('../../../assets/4.jpg')
-        },
-        {
-          picSrc: require('../../../assets/demo.jpg')
+          picSrc: require('../../../assets/bg.jpg')
         },
         {
           picSrc: require('../../../assets/1.jpg')
@@ -138,61 +168,7 @@ export default {
           picSrc: require('../../../assets/2.jpg')
         },
         {
-          picSrc: require('../../../assets/3.jpg')
-        },
-        {
-          picSrc: require('../../../assets/4.jpg')
-        },
-        {
-          picSrc: require('../../../assets/1.jpg')
-        },
-        {
-          picSrc: require('../../../assets/2.jpg')
-        },
-        {
-          picSrc: require('../../../assets/3.jpg')
-        },
-        {
-          picSrc: require('../../../assets/4.jpg')
-        },
-        {
-          picSrc: require('../../../assets/demo.jpg')
-        },
-        {
-          picSrc: require('../../../assets/1.jpg')
-        },
-        {
-          picSrc: require('../../../assets/2.jpg')
-        },
-        {
-          picSrc: require('../../../assets/3.jpg')
-        },
-        {
-          picSrc: require('../../../assets/4.jpg')
-        },
-        {
-          picSrc: require('../../../assets/1.jpg')
-        },
-        {
-          picSrc: require('../../../assets/2.jpg')
-        },
-        {
-          picSrc: require('../../../assets/3.jpg')
-        },
-        {
-          picSrc: require('../../../assets/4.jpg')
-        },
-        {
-          picSrc: require('../../../assets/demo.jpg')
-        },
-        {
-          picSrc: require('../../../assets/1.jpg')
-        },
-        {
-          picSrc: require('../../../assets/2.jpg')
-        },
-        {
-          picSrc: require('../../../assets/3.jpg')
+          picSrc: require('../../../assets/bg.jpg')
         },
         {
           picSrc: require('../../../assets/4.jpg')
@@ -213,6 +189,33 @@ export default {
           picSrc: require('../../../assets/demo.jpg')
         },
         {
+          picSrc: require('../../../assets/bg.jpg')
+        },
+        {
+          picSrc: require('../../../assets/2.jpg')
+        },
+        {
+          picSrc: require('../../../assets/3.jpg')
+        },
+        {
+          picSrc: require('../../../assets/4.jpg')
+        },
+        {
+          picSrc: require('../../../assets/bg.jpg')
+        },
+        {
+          picSrc: require('../../../assets/2.jpg')
+        },
+        {
+          picSrc: require('../../../assets/3.jpg')
+        },
+        {
+          picSrc: require('../../../assets/4.jpg')
+        },
+        {
+          picSrc: require('../../../assets/bg.jpg')
+        },
+        {
           picSrc: require('../../../assets/1.jpg')
         },
         {
@@ -234,7 +237,7 @@ export default {
           picSrc: require('../../../assets/3.jpg')
         },
         {
-          picSrc: require('../../../assets/4.jpg')
+          picSrc: require('../../../assets/bg.jpg')
         }
       ]
     }
@@ -275,6 +278,12 @@ export default {
     },
     minimize() {
       this.$store.commit('changeInterfaceXiangceVisible')
+    },
+    deleteItem(index) {
+      this.items.splice(index, 1)
+    },
+    setbackground(item) {
+      this.$store.dispatch('updateBgc', item.picSrc)
     }
   }
 }
@@ -282,7 +291,7 @@ export default {
 
 <style lang="scss" scoped>
 .xiangce {
-  width: 75vw;
+  width: 55vw;
   height: 70vh;
   position: absolute;
   left: 50%;
@@ -350,10 +359,37 @@ export default {
       box-sizing: border-box;
       padding: 3px;
       transition: 0.3s;
+      position: relative;
       img {
         width: 100%;
         height: 100%;
         transition: 0.4s;
+      }
+      .option {
+        width: 100%;
+        height: 0;
+        background: rgba(189, 189, 189, 0.9);
+        transition: 0.3s;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          font-size: 1.4em;
+          margin: 0 20px;
+          opacity: 0;
+          transition: 0.3s;
+        }
+        i:hover {
+          font-size: 1.6em;
+        }
+        .el-icon-delete {
+          color: #e53935;
+        }
+        .el-icon-monitor {
+          color: #00c853;
+        }
       }
     }
 
@@ -362,6 +398,14 @@ export default {
     }
     .pic:hover {
       padding: 0;
+    }
+
+    .pic:hover .option {
+      height: 50px;
+      z-index: 999;
+    }
+    .pic:hover .option i {
+      opacity: 1;
     }
   }
 
