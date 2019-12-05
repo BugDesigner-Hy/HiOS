@@ -1,6 +1,6 @@
 <template>
   <div class="tianqi middle" v-if="visible" v-drag>
-    <img :src="bgPic" alt />
+    <img :src="curItem.pic" alt />
     <div class="control">
       <svg class="icon icon-weishenhe" aria-hidden="true" @click="minimize">
         <use xlink:href="#icon-weishenhe" />
@@ -10,170 +10,62 @@
       </svg>
     </div>
     <div class="main">
-      <div class="city">{{curItem.city}}</div>
-      <div class="wea">{{curItem.wea}}</div>
+      <input type="text" v-model.lazy="city" class="city" />
+      <div class="wea">{{curItem.wea_day}}</div>
       <div class="tem">{{curItem.tem}}</div>
       <div class="other">
         <span class="week">{{curItem.week}}</span>
-        <span class="brief">{{curItem.brief}}</span>
-        <span class="high-tem">{{curItem.htem}}</span>
-        <span class="low-tem">{{curItem.ltem}}</span>
+        <span class="brief">{{curItem.date}}</span>
+        <span class="high-tem">{{curItem.tem1}}</span>
+        <span class="low-tem">{{curItem.tem2}}</span>
       </div>
     </div>
     <div class="future">
       <ul>
-        <li v-for="(item,index) in items" :key="index" @click="()=>setbg(item)">
+        <li v-for="(item,index) in items.slice(1)" :key="index">
           <div class="week">{{item.week}}</div>
           <div class="wea">
             <i :class="item.icon"></i>
           </div>
-          <div class="tem">{{item.htem}} {{item.ltem}}</div>
+          <div class="tem">{{item.tem1}} {{item.tem2}}</div>
         </li>
       </ul>
     </div>
     <div class="detail">
-      <ul>
-        <li>
-          <div class="day-detail richu">
-            <div class="title">日出</div>上午7:56
-          </div>
-          <div class="day-detail riluo">
-            <div class="title">日落</div>上午7:56
-          </div>
-        </li>
-        <li>
-          <div class="day-detail jiangxuegailv">
-            <div class="title">日落</div>上午7:56
-          </div>
-          <div class="day-detail shidu">
-            <div class="title">日落</div>上午7:56
-          </div>
-        </li>
-        <li>
-          <div class="day-detail wind">
-            <div class="title">日落</div>上午7:56
-          </div>
-          <div class="day-detail tigan">
-            <div class="title">日落</div>上午7:56
-          </div>
-        </li>
-        <li>
-          <div class="day-detail jiangshui">
-            <div class="title">日落</div>上午7:56
-          </div>
-          <div class="day-detail qiya">
-            <div class="title">日落</div>上午7:56
-          </div>
-        </li>
-        <li>
-          <div class="day-detail nengjiandu">
-            <div class="title">日落</div>上午7:56
-          </div>
-          <div class="day-detail ziwaixian">
-            <div class="title">日落</div>上午7:56
-          </div>
-        </li>
-      </ul>
+      <div class="wind">{{curItem.win[0]}}</div>
+      <div class="speed">{{curItem.win_speed}}</div>
     </div>
   </div>
 </template>
 
 <script>
+import { getfuture } from '../../../api/weather'
 export default {
   data() {
     return {
       bgPic: require('../../../assets/sun-day.jpg'),
+      city: '银川',
       curItem: '',
-      items: [
-        {
-          city: '银川',
-          day: '2019-12-04',
-          wea: '晴天',
-          tem: '4',
-          week: '星期三',
-          brief: '今天',
-          htem: '4',
-          ltem: '-13',
-          icon: 'el-icon-sunny',
-          pic: require('../../../assets/sun-day.jpg')
-        },
-        {
-          city: '银川',
-          day: '2019-12-05',
-          wea: '多云',
-          tem: '3',
-          week: '星期四',
-          brief: '明天',
-          htem: '5',
-          ltem: '-14',
-          icon: 'el-icon-cloudy',
-          pic: require('../../../assets/cloudy-day.jpg')
-        },
-        {
-          city: '银川',
-          day: '2019-12-06',
-          wea: '雷雨',
-          tem: '-2',
-          week: '星期五',
-          brief: '后天',
-          htem: '4',
-          ltem: '-16',
-          icon: 'el-icon-lightning',
-          pic: require('../../../assets/leizhenyu.jpg')
-        },
-        {
-          city: '银川',
-          day: '2019-12-07',
-          wea: '小雨',
-          tem: '3',
-          week: '星期六',
-          brief: '2019-12-07',
-          htem: '3',
-          ltem: '-14',
-          icon: 'el-icon-light-rain',
-          pic: require('../../../assets/yintian-day.jpg')
-        },
-        {
-          city: '银川',
-          day: '2019-12-08',
-          wea: '多云',
-          tem: '5',
-          week: '星期一',
-          brief: '2019-12-08',
-          htem: '6',
-          ltem: '-10',
-          icon: 'el-icon-cloudy',
-          pic: require('../../../assets/cloudy-day.jpg')
-        },
-        {
-          city: '银川',
-          day: '2019-12-09',
-          wea: '小雪',
-          tem: '-1',
-          week: '星期二',
-          brief: '2019-12-09',
-          htem: '2',
-          ltem: '-18',
-          icon: 'el-icon-heavy-rain',
-          pic: require('../../../assets/xiaoxue-day.jpg')
-        },
-        {
-          city: '银川',
-          day: '2019-12-10',
-          wea: '小雨',
-          tem: '4',
-          week: '星期三',
-          brief: '2019-12-10',
-          htem: '4',
-          ltem: '-13',
-          icon: 'el-icon-light-rain',
-          pic: require('../../../assets/yintian-night.jpg')
-        }
-      ]
+      items: []
+    }
+  },
+  watch: {
+    city() {
+      getfuture(this.city).then(res => {
+        this.city = res.data.city
+        this.items = res.data.data
+        this.addIconProperty(this.items)
+        this.curItem = this.items[0]
+      })
     }
   },
   mounted: function() {
-    this.curItem = this.items[0]
+    getfuture(this.city).then(res => {
+      this.city = res.data.city
+      this.items = res.data.data
+      this.addIconProperty(this.items)
+      this.curItem = this.items[0]
+    })
   },
   computed: {
     visible() {
@@ -191,6 +83,32 @@ export default {
     setbg(item) {
       this.curItem = item
       this.bgPic = item.pic
+    },
+    addIconProperty(items) {
+      this.items.forEach(element => {
+        switch (element.wea_day) {
+          case '晴':
+            element.icon = 'el-icon-sunny'
+            element.pic = require('../../../assets/sun-day.jpg')
+            break
+          case '多云':
+            element.icon = 'el-icon-cloudy'
+            element.pic = require('../../../assets/cloudy-day.jpg')
+            break
+          case '小雨':
+            element.icon = 'el-icon-light-rain'
+            element.pic = require('../../../assets/dayu.jpg')
+            break
+          case '小雪':
+            element.icon = 'el-icon-heavy-rain'
+            element.pic = require('../../../assets/xiaoxue-day.jpg')
+            break
+          default:
+            element.icon = 'el-icon-sunny'
+            element.pic = require('../../../assets/sun-day.jpg')
+            break
+        }
+      })
     }
   }
 }
@@ -206,7 +124,7 @@ export default {
   img {
     position: absolute;
     width: 100%;
-    height: 139%;
+    height: 100%;
     z-index: -1;
     opacity: 0.7;
     border-radius: 10px;
@@ -243,11 +161,16 @@ export default {
       margin: 0 auto;
     }
     .city {
+      border: none;
+      outline: none;
+      background: none;
       height: 30%;
       color: #fff;
-      line-height: 4;
-      font-size: 2em;
+      font-size: 2.3em;
       letter-spacing: 8px;
+      box-sizing: border-box;
+      padding-top: 39px;
+      cursor: pointer;
       //   background-color: rgb(83, 129, 216);
     }
     .wea {
@@ -305,70 +228,45 @@ export default {
   }
   .future {
     width: 100%;
-    height: 50%;
-    // background-color: rgb(103, 158, 230);
+    height: 43%;
     ul {
       margin: 0;
       padding: 0;
       list-style-type: none;
       li {
         width: 100%;
-        height: 49px;
+        height: 48px;
         box-sizing: border-box;
-        // background-color: rgb(80, 218, 67);
         display: flex;
         justify-content: space-between;
         align-items: center;
         color: #fff;
         padding: 0 10px;
-        cursor: pointer;
+        // cursor: pointer;
         i {
           font-size: 1.5em;
           color: #ffff00;
         }
         .tem {
+          width: 80px;
+          text-align: end;
           letter-spacing: 1px;
         }
       }
-      li:hover {
-        box-shadow: 2px 2px 5px 2px #fff inset;
-      }
+      //   li:hover {
+      //     box-shadow: 2px 2px 5px 2px #fff inset;
+      //   }
     }
   }
   .detail {
     width: 100%;
-    height: 300px;
-    // background-color: rgb(157, 214, 82);
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      li {
-        width: 100%;
-        height: 60px;
-        box-sizing: border-box;
-        border: 1px solid rgb(189, 182, 182);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #fff;
-        padding: 0 10px;
-        .day-detail {
-          width: 50%;
-          height: 60px;
-          line-height: 60px;
-          font-size: 1.2em;
-          text-align: center;
-          position: relative;
-          .title {
-            position: absolute;
-            top: 5px;
-            left: 1px;
-            font-size: 0.5em;
-            line-height: initial;
-          }
-        }
-      }
+    height: 12%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div {
+      font-size: 1.5em;
+      color: #fff;
     }
   }
 }

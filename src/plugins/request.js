@@ -5,14 +5,14 @@ import Qs from 'qs'
 
 // 创建axios实例
 const service = axios.create({
-  baseURL: 'http://36.103.242.204:3000', // api 的 base_url
+  baseURL: '', // api 的 base_url
   timeout: 15000, // 请求超时时间
   withCredentials: true,
   transformRequest: [(data, header) => {
     data = Qs.stringify(data)
     // 'application/x-www-form-urlencoded'
-    // header['Content-Type'] = 'application/x-www-form-urlencoded'
-    // header['Access-Control-Allow-Origin'] = '*'
+    header['Content-Type'] = 'application/json'
+    header['Access-Control-Allow-Origin'] = '*'
     return data
   }]
 })

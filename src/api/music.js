@@ -1,5 +1,5 @@
 import http from '../plugins/request'
-
+const proxy = '/music'
 export function login() {
     return new Promise((resolve, reject) => {
         const params = {
@@ -17,7 +17,7 @@ export function topsong() {
         const params = {
             type: '96',
         }
-        http.get('/top/song', { params }).then(res => {
+        http.get(proxy+'/top/song', { params }).then(res => {
             resolve(res)
         }).catch(err => reject(err))
     })
@@ -61,7 +61,7 @@ export function songUrl(songId) {
         const params = {
             id: songId
         }
-        http.get('/song/url', { params }).then(res => {
+        http.get(proxy+'/song/url', { params }).then(res => {
             resolve(res)
         }).catch(err => reject(err))
     })
@@ -83,7 +83,7 @@ export function songDetail(songId) {
         const params = {
             ids: songId
         }
-        http.get('/song/detail', { params }).then(res => {
+        http.get(proxy+'/song/detail', { params }).then(res => {
             resolve(res)
         }).catch(err => reject(err))
     })
