@@ -13,6 +13,7 @@
       <task-xiangce></task-xiangce>
       <task-rili></task-rili>
       <task-tianqi></task-tianqi>
+      <task-clock></task-clock>
     </div>
   </div>
 </template>
@@ -26,6 +27,7 @@ import TaskTixing from './items/tixing/task-tixing'
 import TaskXiangce from './items/xiangce/task-xiangce'
 import TaskRili from './items/rili/task-rili'
 import TaskTianqi from './items/tianqi/task-tianqi';
+import TaskClock from './items/clock/task-clock';
 export default {
   name: 'desktop',
   components: {
@@ -36,7 +38,8 @@ export default {
     TaskTixing,
     TaskXiangce,
     TaskRili,
-    TaskTianqi
+    TaskTianqi,
+    TaskClock
   },
   data() {
     return {

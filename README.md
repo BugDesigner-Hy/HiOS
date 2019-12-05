@@ -30,6 +30,7 @@ npm run serve
 - 实现相册App 点击图片浏览大图 可任意缩放比例 删除相片 可设定相片为桌面背景
 - 实现日历功能 这里使用了elementUI中的日历组件 提醒事项App中的内容可在日历中同步显示
 - 实现天气App 可查看未来七天的天气状况 可查询中国任一城市天气
+- 实现了一个精美的时钟App 
 
 #### 桌面效果
 
@@ -42,6 +43,8 @@ npm run serve
 <img src="./readme/rili.png" style="zoom:75%;" />
 
 <img src="./readme/tianqi.png" style="zoom:75%;" />
+
+<img src="./readme/shizhong.png" style="zoom:75%;" />
 
 #### 未解决的问题及八阿哥[bug]:
 
