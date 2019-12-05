@@ -45,10 +45,6 @@ export default {
       this.hourPointer = hour * 30 + -90
       this.minPointer = min * 6 + -90
       this.secPointer = sec * 6 + -90
-      //   console.log('hourPointer :', this.hourPointer)
-      //   console.log('minPointer :', this.minPointer)
-      //   console.log('secPointer :', this.secPointer)
-      //   this.$refs.hourRef.
     }
   }
 }
