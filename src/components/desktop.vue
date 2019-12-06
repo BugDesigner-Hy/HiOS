@@ -8,7 +8,6 @@
     <item-shipin></item-shipin>
     <item-tianqi></item-tianqi>
     <item-tixing></item-tixing>
-    <item-tongxunlu></item-tongxunlu>
     <item-wenjianjia></item-wenjianjia>
     <item-xiangce></item-xiangce>
     <item-shangdian></item-shangdian>
@@ -24,7 +23,6 @@ import ItemRili from './items/rili/item-rili'
 import ItemShipin from './items/item-shipin'
 import ItemTianqi from './items/tianqi/item-tianqi'
 import ItemTixing from './items/tixing/item-tixing'
-import ItemTongxunlu from './items/item-tongxunlu'
 import ItemWenjianjia from './items/item-wenjianjia'
 import ItemXiangce from './items/xiangce/item-xiangce'
 import ItemShangdian from './items/item.shangdian'
@@ -39,7 +37,6 @@ export default {
     ItemShipin,
     ItemTianqi,
     ItemTixing,
-    ItemTongxunlu,
     ItemWenjianjia,
     ItemXiangce,
     ItemShangdian
