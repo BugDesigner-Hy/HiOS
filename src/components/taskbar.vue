@@ -14,6 +14,7 @@
       <task-rili></task-rili>
       <task-tianqi></task-tianqi>
       <task-clock></task-clock>
+      <task-jisuanqi></task-jisuanqi>
     </div>
   </div>
 </template>
@@ -26,8 +27,9 @@ import TaskMusic from './items/qqmusic/task-music'
 import TaskTixing from './items/tixing/task-tixing'
 import TaskXiangce from './items/xiangce/task-xiangce'
 import TaskRili from './items/rili/task-rili'
-import TaskTianqi from './items/tianqi/task-tianqi';
-import TaskClock from './items/clock/task-clock';
+import TaskTianqi from './items/tianqi/task-tianqi'
+import TaskClock from './items/clock/task-clock'
+import TaskJisuanqi from './items/jisuanji/task-jisuanqi'
 export default {
   name: 'desktop',
   components: {
@@ -39,7 +41,8 @@ export default {
     TaskXiangce,
     TaskRili,
     TaskTianqi,
-    TaskClock
+    TaskClock,
+    TaskJisuanqi
   },
   data() {
     return {

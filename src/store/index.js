@@ -19,6 +19,8 @@ export default new Vuex.Store({
     task_tianqi_visible: false,
     interface_clock_visible: false,
     task_clock_visible: false,
+    interface_jisuanqi_visible: false,
+    task_jisuanqi_visible: false,
     bgc: require('../assets/bg.jpg'),
     remindList: [
       {
@@ -94,6 +96,12 @@ export default new Vuex.Store({
     },
     changeTaskClockVisible(state) {
       state.task_clock_visible = !state.task_clock_visible
+    },
+    changeInterfaceJisuanqiVisible(state) {
+      state.interface_jisuanqi_visible = !state.interface_jisuanqi_visible
+    },
+    changeTaskJisuanqiVisible(state) {
+      state.task_jisuanqi_visible = !state.task_jisuanqi_visible
     }
   },
   actions: {

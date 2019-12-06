@@ -31,6 +31,7 @@ npm run serve
 - 实现日历功能 这里使用了elementUI中的日历组件 提醒事项App中的内容可在日历中同步显示
 - 实现天气App 可查看未来七天的天气状况 可查询中国任一城市天气
 - 实现了一个时尚简约的时钟App 
+- 实现计算器App 可进行简单的加减乘除运算
 
 #### 桌面效果
 
@@ -45,6 +46,8 @@ npm run serve
 <img src="./readme/tianqi.png" style="zoom:75%;" />
 
 <img src="./readme/shizhong.png" style="zoom:75%;" />
+
+<img src="./readme/jisuanqi.png" style="zoom:87%;" />
 
 #### 未解决的问题及八阿哥[bug]:
 
