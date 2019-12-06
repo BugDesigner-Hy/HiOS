@@ -2,10 +2,8 @@
   <div class="desktop">
     <item-wx></item-wx>
     <item-qqmusic></item-qqmusic>
-    <item-beiwanglu></item-beiwanglu>
     <item-clock></item-clock>
     <item-jisuanji></item-jisuanji>
-    <item-notes></item-notes>
     <item-rili></item-rili>
     <item-shipin></item-shipin>
     <item-tianqi></item-tianqi>
@@ -20,10 +18,8 @@
 <script>
 import ItemWx from './items/wx/item-wx'
 import ItemQqmusic from './items/qqmusic/item-qqmusic'
-import ItemBeiwanglu from './items/item-beiwanglu'
 import ItemClock from './items/clock/item-clock'
 import ItemJisuanji from './items/jisuanji/item-jisuanji'
-import ItemNotes from './items/item-notes'
 import ItemRili from './items/rili/item-rili'
 import ItemShipin from './items/item-shipin'
 import ItemTianqi from './items/tianqi/item-tianqi'
@@ -37,10 +33,8 @@ export default {
   components: {
     ItemWx,
     ItemQqmusic,
-    ItemBeiwanglu,
     ItemClock,
     ItemJisuanji,
-    ItemNotes,
     ItemRili,
     ItemShipin,
     ItemTianqi,
