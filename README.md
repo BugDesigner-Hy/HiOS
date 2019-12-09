@@ -32,6 +32,9 @@ npm run serve
 - 实现天气App 可查看未来七天的天气状况 可查询中国任一城市天气
 - 实现了一个时尚简约的时钟App 
 - 实现计算器App 可进行简单的加减乘除运算
+- 实现视频App 暂时只可以播放后台默认影片 使用插件[video.js](https://videojs.com/) 
+- 实现商店App 一个简单的集成了京东/淘宝/当当网/苏宁易购的小应用(主要练习<iframe>标签的使用)
+- 实现类似资源管理器的文件夹App 这里也是使用了模拟数据 没有调用接口 后续考虑加上
 
 #### 桌面效果
 
@@ -48,6 +51,10 @@ npm run serve
 <img src="./readme/shizhong.png" style="zoom:75%;" />
 
 <img src="./readme/jisuanqi.png" style="zoom:87%;" />
+
+<img src="./readme/video.png" style="zoom:87%;" />
+
+<img src="./readme/shop.png" style="zoom:87%;" />
 
 #### 未解决的问题及八阿哥[bug]:
 

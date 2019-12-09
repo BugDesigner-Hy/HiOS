@@ -6,6 +6,7 @@ import store from './store'
 import './plugins/element.js'
 import './style/global.css'
 import './plugins/drag'
+import './plugins/event'
 
 Vue.config.productionTip = false
 
