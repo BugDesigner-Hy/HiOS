@@ -11,6 +11,11 @@
     </div>
     <div class="main">
       <input type="text" v-model.lazy="city" class="city" />
+      <el-tooltip class="tooltip" effect="dark" :content="tooltip" placement="right-start">
+        <svg class="icon icon-tishi" aria-hidden="true" @click="minimize">
+          <use xlink:href="#icon-tishi" />
+        </svg>
+      </el-tooltip>
       <div class="wea">{{curItem.wea_day}}</div>
       <div class="tem">{{curItem.tem}}</div>
       <div class="other">
@@ -46,6 +51,7 @@ export default {
       bgPic: require('../../../assets/sun-day.jpg'),
       city: '银川',
       curItem: '',
+      tooltip:'点击城市 在输入框输入城市 回车即可查询',
       items: []
     }
   },
@@ -150,6 +156,12 @@ export default {
   .main {
     width: 100%;
     height: 45%;
+    .icon-tishi {
+      position: absolute;
+      font-size: 1.2em;
+      top: 47px;
+      left: 268px;
+    }
     // background-color: rgb(236, 145, 145);
     .city,
     .wea,

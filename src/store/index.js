@@ -21,6 +21,12 @@ export default new Vuex.Store({
     task_clock_visible: false,
     interface_jisuanqi_visible: false,
     task_jisuanqi_visible: false,
+    interface_shipin_visible: false,
+    task_shipin_visible: false,
+    interface_wenjianjia_visible: false,
+    task_wenjianjia_visible: false,
+    interface_shop_visible: false,
+    task_shop_visible: false,
     bgc: require('../assets/bg.jpg'),
     remindList: [
       {
@@ -48,9 +54,7 @@ export default new Vuex.Store({
   },
   mutations: {
     updateBgc(state, newbgc) {
-      // console.log('state.bgc :', state.bgc);
       state.bgc = newbgc
-      console.log('state.bgc :', state.bgc);
     },
     updateRemindList(state, newList) {
       state.remindList = newList
@@ -102,6 +106,24 @@ export default new Vuex.Store({
     },
     changeTaskJisuanqiVisible(state) {
       state.task_jisuanqi_visible = !state.task_jisuanqi_visible
+    },
+    changeInterfaceShipinVisible(state) {
+      state.interface_shipin_visible = !state.interface_shipin_visible
+    },
+    changeTaskShipinVisible(state) {
+      state.task_shipin_visible = !state.task_shipin_visible
+    },
+    changeInterfaceWenjianjiaVisible(state) {
+      state.interface_wenjianjia_visible = !state.interface_wenjianjia_visible
+    },
+    changeTaskWenjianjiaVisible(state) {
+      state.task_wenjianjia_visible = !state.task_wenjianjia_visible
+    },
+    changeInterfaceShopVisible(state) {
+      state.interface_shop_visible = !state.interface_shop_visible
+    },
+    changeTaskShopVisible(state) {
+      state.task_shop_visible = !state.task_shop_visible
     }
   },
   actions: {

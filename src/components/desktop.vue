@@ -20,12 +20,12 @@ import ItemQqmusic from './items/qqmusic/item-qqmusic'
 import ItemClock from './items/clock/item-clock'
 import ItemJisuanji from './items/jisuanji/item-jisuanji'
 import ItemRili from './items/rili/item-rili'
-import ItemShipin from './items/item-shipin'
+import ItemShipin from './items/shipin/item-shipin'
 import ItemTianqi from './items/tianqi/item-tianqi'
 import ItemTixing from './items/tixing/item-tixing'
-import ItemWenjianjia from './items/item-wenjianjia'
+import ItemWenjianjia from './items/wenjianjia/item-wenjianjia'
 import ItemXiangce from './items/xiangce/item-xiangce'
-import ItemShangdian from './items/item.shangdian'
+import ItemShangdian from './items/shangdian/item-shangdian'
 export default {
   name: 'desktop',
   components: {

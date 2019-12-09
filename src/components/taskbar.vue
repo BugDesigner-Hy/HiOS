@@ -15,6 +15,8 @@
       <task-tianqi></task-tianqi>
       <task-clock></task-clock>
       <task-jisuanqi></task-jisuanqi>
+      <task-video></task-video>
+      <task-files></task-files>
     </div>
   </div>
 </template>
@@ -30,6 +32,8 @@ import TaskRili from './items/rili/task-rili'
 import TaskTianqi from './items/tianqi/task-tianqi'
 import TaskClock from './items/clock/task-clock'
 import TaskJisuanqi from './items/jisuanji/task-jisuanqi'
+import TaskVideo from './items/shipin/task-shipin'
+import TaskFiles from './items/wenjianjia/task-wenjianjia'
 export default {
   name: 'desktop',
   components: {
@@ -42,7 +46,9 @@ export default {
     TaskRili,
     TaskTianqi,
     TaskClock,
-    TaskJisuanqi
+    TaskJisuanqi,
+    TaskVideo,
+    TaskFiles
   },
   data() {
     return {
