@@ -13,12 +13,12 @@ npm i
 npm run serve
 ```
 
-##### 说明 本项目中的音乐播放器使用的接口是[[网易云音乐Node版]( https://binaryify.github.io/NeteaseCloudMusicApi/#/ )]，要想正常使用音乐播放功能 需要将该项目部署到本地并启动才行 [具体步骤](https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=%e5%ae%89%e8%a3%85)在这里
+##### 说明 本项目中的音乐播放器使用的接口是[[网易云音乐Node版]( https://binaryify.github.io/NeteaseCloudMusicApi/#/ )]
 
-#### 目前完成的功能
+#### 目前完成的功能（基本上实现了所有的应用功能）
 
 - 桌面整体布局
-- 任务栏绘制 包括开始菜单 喇叭 右下角时间
+- 任务栏绘制 包括开始菜单 喇叭 右下角时间 注：开始菜单就只做个样子  里面的点击功能没多大技术价值 就不实现了 
 - 喇叭滑块绘制
 - 时间显示 实时显示当前时间
 - 应用窗口demo绘制
@@ -35,6 +35,7 @@ npm run serve
 - 实现视频App 暂时只可以播放后台默认影片 使用插件[video.js](https://videojs.com/) 
 - 实现商店App 一个简单的集成了京东/淘宝/当当网/苏宁易购的小应用(主要练习<iframe>标签的使用)
 - 实现类似资源管理器的文件夹App 这里也是使用了模拟数据 没有调用接口 后续考虑加上
+- 实现了一个简易丑陋的群聊室（这里只是简单实现了客户端和服务端的通信 后续会做一个仿微信的应用来深入学习websocket）注： 使用了[socket.io]( https://socket.io/ )来进行通信
 
 #### 桌面效果
 
@@ -55,6 +56,8 @@ npm run serve
 <img src="./readme/video.png" style="zoom:87%;" />
 
 <img src="./readme/shop.png" style="zoom:87%;" />
+
+<img src="./readme/chat.png" style="zoom:87%;" />
 
 #### 未解决的问题及八阿哥[bug]:
 

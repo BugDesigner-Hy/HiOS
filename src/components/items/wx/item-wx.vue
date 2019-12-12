@@ -3,7 +3,7 @@
     <svg class="icon icon-weixin" aria-hidden="true" @click="changeVisible">
       <use xlink:href="#icon-liaotian" />
     </svg>
-    <div class="item-name">微信</div>
+    <div class="item-name">聊天室</div>
     <interface-wx></interface-wx>
   </div>
 </template>

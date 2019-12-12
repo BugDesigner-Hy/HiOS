@@ -8,11 +8,16 @@
         <use xlink:href="#icon-shanchuhang" />
       </svg>
     </div>
-    <video class="video" preload="none" controls width="640" height="400" poster="./assets/poster.jpg" data-setup="{}">
-      <source
-        src="http://36.103.242.204:8889/test.mp4"
-        type="video/mp4"
-      />
+    <video
+      class="video"
+      preload="none"
+      controls
+      width="640"
+      height="400"
+      poster="./assets/poster.jpg"
+      data-setup="{}"
+    >
+      <source src="http://36.103.242.204:8889/test.mp4" type="video/mp4" />
       <p class="vjs-no-js">
         To view this video please enable JavaScript, and consider upgrading to a
         web browser that
@@ -49,10 +54,10 @@ export default {
 
 <style lang="scss" scoped>
 .shipin {
-//   .video {
-//     width: 640px;
-//     height: 400px;
-//   }
+  //   .video {
+  //     width: 640px;
+  //     height: 400px;
+  //   }
 
   .control {
     position: absolute;

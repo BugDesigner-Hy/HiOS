@@ -4,6 +4,7 @@ import './plugins/video';
 // import router from './router'
 import store from './store'
 import './plugins/element.js'
+// import './plugins/socket'
 import './style/global.css'
 import './plugins/drag'
 import './plugins/event'
